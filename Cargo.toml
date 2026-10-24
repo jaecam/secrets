@@ -18,7 +18,7 @@ keywords = [ "crypto", "cryptography", "allocator" ]
 
 [dependencies]
 libc          = '0.2'
-libsodium-sys = { version = '0.2', optional = true }
+libsodium-sys = { package = 'libsodium-sys-stable', version = '1.24', optional = true }
 page_size     = '0.6'
 
 [target.'cfg(target_family = "unix")'.build-dependencies]
@@ -28,7 +28,7 @@ pkg-config = '0.3'
 vcpkg = '0.2'
 
 [dev-dependencies]
-libsodium-sys = '0.2'
+libsodium-sys = { package = 'libsodium-sys-stable', version = '1.24' }
 
 [features]
 allow-coredumps   = []
